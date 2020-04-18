@@ -4,14 +4,18 @@
  }
  
  #Supercode-hilft{
-    display: flex;
-    height: 90vh;
+    display: grid;
+    grid-template-columns: 60% auto;
+    height: 100vh;
     background: rgba(0, 222, 172);
   }
  
   .main {
     display: flex;
-    height: 90vh;
+    font-weight: 100;
+  }
+  .main p{
+    font-size: 0.9rem;
   }
   .text {
     display: flex;
@@ -19,21 +23,33 @@
     justify-content:space-evenly
   }
   .text1 {
-    width: 30%;
+    width: 35%;
     color: #5234f9;
-    padding-left: 100px;
   }
   .text2 {
-    width: 20%;
+   width: 40%;
     color: white;
-    padding-left: 50px;
-    padding-right: 50px;
   }
-  img {
+  .text2 p{
+    padding-bottom: 5vh;
+  }
+  #Supercode-hilft img {
     height: 100%;
-    width: auto;
+    width: 100%;
   }
+<<<<<<< HEAD
 
   h1{
       font-size: 50px;
+=======
+ 
+  #Supercode-hilft h1{
+      font-size: 3rem;
+  }
+  .text2 button:first-of-type{
+    margin-right: 2vh;
+  }
+  .ls{
+    font-size: 0.8rem;
+>>>>>>> c72d9715c82490147e735d237d56c0aeda23f665
   }
