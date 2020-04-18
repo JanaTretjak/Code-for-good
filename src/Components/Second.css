@@ -5,13 +5,14 @@
 }
 body{
     background: white;
-    height: 100vh;
+
 
 }
 .container{
     display: grid;
     grid-template-columns: repeat(12, 12fr);
     grid-template-rows: repeat(12, 12fr);
+    height: 100vh;
 }
 .container h1{
     color: rgba(0, 222, 172);
@@ -26,15 +27,48 @@ body{
     grid-row: 6/7;
     padding-top: 30px;
 }
-.container a{
+.container button:nth-of-type(1){
     padding-top: 30px;
-    grid-column: 3/12;
+    grid-column: 3/4;
+    grid-row: 7/8;
+}
+.container .btn{
+    grid-column: 7/12;
     grid-row: 7/8;
 }
 .streifen{
     background: rgba(0, 222, 172);
     grid-column: 1/1;
-    grid-row: 1/12;
-    
+    grid-row: 1/12; 
+    width: 10vh;
+    border: 4px solid #fff;  
 }
 
+.container button:nth-of-type(3){
+    grid-column: 1/1;
+    grid-row: 12/13; 
+}
+.container button:nth-of-type(4){
+    grid-column: 12/13;
+    grid-row: 1/1; 
+}
+.obenRechts{
+    top: 1vh;
+    right: 1vh;
+    background: url(Menu_button1.svg) center no-repeat;
+    height: 10vh;
+    width: 10vh;
+    border: 4px solid #fff;
+    justify-self: right;
+}
+.untenLinks{
+
+    background: url(Rectangle_5.svg) center no-repeat;
+    height: 10vh;
+    width: 11vh;
+    border: 4px solid #fff;
+    justify-self: right;
+    font-size: 3rem;
+    color: white;
+    justify-self: left;
+}
