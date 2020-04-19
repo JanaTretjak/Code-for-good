@@ -83,6 +83,11 @@ class Umfrage extends Component {
     }
     handleChange1 = e => this.setState({ [e.target.name]: e.target.value });
     // handleChange1 = e => this.setState({ [e.target.name]: e.target.value });
+    senden = (e) => {
+        e.preventDefault();
+        this.setState({ display1: !this.state.display1 });
+        this.setState({ display2: !this.state.display1 });
+    }
     render() {
 
         return (
@@ -108,7 +113,7 @@ class Umfrage extends Component {
                             }
                         </div>
                         <div className="senden">
-                            <input type="submit" value="Senden"></input>
+                            <input type="submit" value="Senden" onClick={this.senden}></input>
                         </div>
                     </form >
                 </article >
