@@ -86,7 +86,7 @@ class Umfrage extends Component {
     senden = (e) => {
         e.preventDefault();
         this.setState({ display1: !this.state.display1 });
-        this.setState({ display2: !this.state.display1 });
+        this.setState({ display2: !this.state.display2 });
     }
     render() {
 
@@ -117,6 +117,11 @@ class Umfrage extends Component {
                         </div>
                     </form >
                 </article >
+                <article className="beenden" style={this.state.display2 ? { display: "none" } : { display: "block" }} >
+                    <h1>🎉YEAH <span>YEAH</span>🎉</h1>
+                    <p>Deine Anfrage wurde an uns versendet. Du erhälst in kürze per Mail eine Bestätigung. Wir werden alle Angaben prüfen und uns zeitnah bei dir melden.</p>
+                    <button onClick={this.props.vonUnten}>Beenden</button>
+                </article>
             </section >
         );
     }
