@@ -47,7 +47,7 @@ class Umfrage extends Component {
             this.state.data[this.state.i].antwort = this.state.value
         }
         console.log(this.state.data)
-        console.log(this.state.data1)
+
         if (this.state.i < this.state.data.length - 1) {
             this.setState({ i: ++this.state.i });
         } else {
@@ -92,11 +92,14 @@ class Umfrage extends Component {
         }
     }
     handleChange1 = e => {
-        this.setState({ [e.target.value]: "this.state.data[this.state.i].antwort" });
-
+        this.setState({ [e.target.name]: this.state.data[this.state.i].antwort });
+        console.log(e.target.name)
+        console.log(e.target)
         if (e.target.name === "" || e.target.name === null || e.target.name === undefined) {
             this.setState({ [e.target.name]: e.target.value });
         }
+        console.log(e.target)
+        console.log(e.target.value)
     }
     // handleChange1 = e => this.setState({ [e.target.name]: e.target.value });
     senden = (e) => {
