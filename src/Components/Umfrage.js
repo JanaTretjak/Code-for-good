@@ -92,7 +92,12 @@ class Umfrage extends Component {
         }
     }
     handleChange1 = e => {
+
         this.setState({ [e.target.name]: e.target.value });
+        if (e.target.name === "") {
+            this.setState({ [e.target.name]: this.state.data[this.state.i].antwort });
+
+        }
     }
     // handleChange1 = e => this.setState({ [e.target.name]: e.target.value });
     senden = (e) => {
