@@ -32,7 +32,7 @@ class First extends Component {
                                 Interview prüft eine unabhängige Jury die Möglichkeiten und schlägt dem Unternehmen
                         Projektpartner für eine kostenfreie Beratung und Umsetzung von Möglichkeiten vor.</p>
                                 <div>
-                                    <button className="btn striped-shadow violet ls" ><span>FRAGEN?</span></button>
+                                    <button className="btn striped-shadow violet ls" onClick={this.props.vonOben}><span>FRAGEN?</span></button>
                                     <button className="btn striped-shadow violet ls" onClick={this.props.vonUnten}><span>LOS GEHT'S</span></button>
                                 </div>
                             </div>

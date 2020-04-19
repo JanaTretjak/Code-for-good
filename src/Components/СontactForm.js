@@ -17,7 +17,7 @@ class ContactForm extends Component {
                     <p>Ratherstr.25 40476 Düsseldorf</p>
                 </div>
                 <div className="contact-input">
-                    <button onClick={this.props.vonLinks}></button>
+                    <button className="kreuz" onClick={this.props.vonLinks}></button>
                     <input type="text" placeholder="VORNAME"></input>
                     <input type="text" placeholder="NAME"></input>
                     <input type="email" placeholder="EMAIL"></input>

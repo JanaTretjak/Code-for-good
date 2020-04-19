@@ -11,6 +11,7 @@ class App extends Component {
     class: false,
     class1: false,
     class2: false,
+    class3: false,
   }
   vonLinks = () => {
     this.setState({ class: !this.state.class });
@@ -25,14 +26,19 @@ class App extends Component {
 
     console.log("data " + this.state.data)
   }
+  vonOben = () => {
+    this.setState({ class3: !this.state.class3 });
+
+    console.log("fragen ")
+  }
   render() {
     return (
       <div className="App">
         <Second vonLinks={this.vonLinks} vonRechts={this.vonRechts} vonUnten={this.vonUnten} />
         <ContactForm vonLinks={this.vonLinks} expend={this.state.class} />
         <Umfrage vonUnten={this.vonUnten} expendUnten={this.state.class2} />
-        <First vonRechts={this.vonRechts} vonUnten={this.vonUnten} expendRechts={this.state.class1} />
-        <FAQ />
+        <First vonRechts={this.vonRechts} vonUnten={this.vonUnten} vonOben={this.vonOben} expendRechts={this.state.class1} />
+        <FAQ vonOben={this.vonOben} expendOben={this.state.class3} />
       </div >
     );
   }
