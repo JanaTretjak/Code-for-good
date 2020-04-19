@@ -60,7 +60,8 @@
 .streifen{
     background: rgba(0, 222, 172);
     grid-column: 1/1;
-    grid-row: 1/13;
+    grid-row: 1/12;
+    
 }
 
 @media only screen and (max-width: 900px){
