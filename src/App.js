@@ -3,7 +3,8 @@ import First from './Components/First'
 import './App.css';
 import Second from './Second';
 import ContactForm from './Components/СontactForm';
-import Umfrage from './Components/Umfrage';
+//import Umfrage from './Components/Umfrage';
+import Umfrage from './Components/Umfrage1';
 import FAQ from './Components/FAQ'
 
 class App extends Component {
