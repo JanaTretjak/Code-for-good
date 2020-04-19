@@ -9,13 +9,20 @@ import image3 from "./img/image 5.svg"
 import image4 from "./img/image 10.svg"
 import image5 from "./img/image 9.svg"
 import image6 from "./img/sourcetree logo_png 1.svg"
-import Footer from './Footer';
+import history from './history'
 
 class First extends Component {
-    state = {}
+    state = {
+        class1: true
+    }
+    vonRechts = () => {
+        this.setState({ class1: false });
+        history.push('/')
+        console.log("test")
+    }
     render() {
         return (
-            <section className={`Supercode-hilft ${this.props.expendRechts ? "SearchPageLinks" : "SearchPageBackLinks"}`}>
+            <section className={`Supercode-hilft `}>
                 <div>
                     <div className="main">
                         <div className="text">
@@ -38,8 +45,8 @@ class First extends Component {
                                 Interview prüft eine unabhängige Jury die Möglichkeiten und schlägt dem Unternehmen
                         Projektpartner für eine kostenfreie Beratung und Umsetzung von Möglichkeiten vor.</p>
                                 <div>
-                                    <button className="btn striped-shadow violet ls" onClick={this.props.vonOben}><span>FRAGEN?</span></button>
-                                    <button className="btn striped-shadow violet ls" onClick={this.props.vonUnten}><span>LOS GEHT'S</span></button>
+                                    <button className="btn striped-shadow violet ls" onClick={() => { history.push('/faq') }}><span>FRAGEN?</span></button>
+                                    <button className="btn striped-shadow violet ls" onClick={() => { history.push('/umfrage') }}><span>LOS GEHT'S</span></button>
                                 </div>
                             </div>
 
@@ -48,7 +55,7 @@ class First extends Component {
                     <img src={foto} alt="" />
                 </div>
                 <footer>
-                    <button className="untenLinks" onClick={this.props.vonRechts}>≪</button>
+                    <button className="untenLinks" onClick={() => { history.push('/') }}>≪</button>
                     <div className="footer">
                         <h1>Unsere Partner</h1>
                         <a href="#"><img src={image1} alt=""></img></a>
@@ -67,3 +74,4 @@ class First extends Component {
 
 export default First;
 
+//${ this.props.expend ? "SearchPage" : "SearchPageBack" }

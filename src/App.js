@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
-import First from './Components/First'
 import './App.css';
-import Second from './Second';
-import ContactForm from './Components/СontactForm';
+//import ContactForm from './Components/СontactForm';
 //import Umfrage from './Components/Umfrage';
-import Umfrage from './Components/Umfrage1';
-import FAQ from './Components/FAQ'
+//import Umfrage from './Components/Umfrage1';
+//import FAQ from './Components/FAQ'
+//import { Router } from 'react-router-dom';
+import Second from './Components/Second';
+//import history from './Components/history'
+//import Routes from './Components/Routes';
+import history from './Components/history'
+import ContactForm from './Components/СontactForm';
+import First from './Components/First';
+import Umfrage from './Components/Umfrage';
+import Routes from './Components/Routes';
 
 class App extends Component {
   state = {
@@ -13,13 +20,15 @@ class App extends Component {
     class1: false,
     class2: false,
     class3: false,
+    // expendRechts: this.state.class1
   }
   vonLinks = () => {
     this.setState({ class: !this.state.class });
     console.log("test")
   }
   vonRechts = () => {
-    this.setState({ class1: !this.state.class1 });
+    this.setState({ class1: true });
+    history.push('/')
     console.log("test")
   }
   vonUnten = () => {
@@ -35,11 +44,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Second vonLinks={this.vonLinks} vonRechts={this.vonRechts} vonUnten={this.vonUnten} />
-        <ContactForm vonLinks={this.vonLinks} expend={this.state.class} />
-        <Umfrage vonUnten={this.vonUnten} expendUnten={this.state.class2} />
-        <First vonRechts={this.vonRechts} vonUnten={this.vonUnten} vonOben={this.vonOben} expendRechts={this.state.class1} />
-        <FAQ vonOben={this.vonOben} expendOben={this.state.class3} />
+        <Routes />
       </div >
     );
   }

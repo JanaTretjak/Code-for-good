@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import history from './history'
 import './FAQ.css';
 import FAQitem from './FAQitem';
 
@@ -91,7 +91,7 @@ function FAQ(props) {
     };
 
     return (
-        <div className={`FAQ ${props.expendOben ? "SearchPageFaq" : "SearchPageBackFaq"}`}>
+        <div className={`FAQ `}>
             <article>
                 <h2>FAQ</h2>
 
@@ -101,8 +101,10 @@ function FAQ(props) {
                     ))}
                 </div>
             </article>
-            <button className="kreuz1" onClick={props.vonOben}></button>
+            <button className="kreuz1" onClick={() => { history.push('/interesse') }}></button>
         </div >
     );
 }
-export default FAQ; 
+export default FAQ;
+
+//${props.expendOben ? "SearchPageFaq" : "SearchPageBackFaq"}

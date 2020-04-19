@@ -1,11 +1,8 @@
-
- *{
-     padding: 5px;
- }
  .Supercode-hilft{
    height: 100vh;
    display: grid;
-   grid-template-rows: 90vh auto;
+   grid-template-rows: auto 12vh;
+   box-sizing: content-box;
  }
  .Supercode-hilft>div{
     display: grid;
@@ -51,22 +48,22 @@
   }
 footer{
   display: flex;
+  padding: 1vh 0 0;
 }
 /******************************** footer   */
 .footer{
-
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   background-color: white;
   width: 100%;
-  margin: 0 5vh;
+}
+.footer img{
+  height: 6vh;
 }
 .footer h1{
-  font-size: 20px;
+  font-size: 1.2rem;
 }
-
-
 /****************************** media */
 
 @media only screen and (max-width: 900px){
