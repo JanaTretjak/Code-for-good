@@ -35,7 +35,16 @@
     flex-direction: column;
     color: white;
 }
-.contact-input :nth-child(1),.contact-input :nth-child(2),
+.kreuz{
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+    background: url(Menu_button.svg) center no-repeat;
+    height: 8vh;
+    width: 8vh;
+    border: 4px solid #fff;
+}
+.contact-input :nth-child(6),.contact-input :nth-child(2),
 .contact-input :nth-child(3),.contact-input :nth-child(4),
 .contact-input :nth-child(5){
     margin-bottom: 2vh;

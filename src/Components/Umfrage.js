@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import data from "./data"
 import Form from './Form';
 import "./umfrage.css"
+import Senden from './Senden';
+import ProgressButton from './Senden';
 
 class Umfrage extends Component {
     state = {
         display: true,
         display0: true,
         display1: false,
+        display2: true,
         data: data,
         i: 0,
         frage: data[0].frage,
@@ -26,7 +29,6 @@ class Umfrage extends Component {
         event.preventDefault();
         if (this.state.data[this.state.i].antwort === undefined) {
             if (this.state.value === "") {
-                // this.state.data[this.state.i].antwort = undefined
                 this.setState({ data: this.state.data });
             } else {
                 this.state.data[this.state.i].antwort = this.state.value
@@ -71,10 +73,23 @@ class Umfrage extends Component {
             });
         }
     }
+    senden = (e) => {
+        e.preventDefault();
+        this.setState({ display1: !this.state.display1 });
+        this.setState({ display2: !this.state.display1 });
+    }
+
+    beenden = () => {
+        // this.setState({ data: this.props.data });
+        console.log("test")
+    }
+    vonUnten = () => {
+
+    }
     render() {
 
         return (
-            <section className="umfrage">
+            <section className={`umfrage ${this.props.expendUnten ? "SearchPageUmfrage" : "SearchPageBackUmfrage"}`}>
                 <article className="losGehts" style={this.state.display ? { display: "block" } : { display: "none" }}>
                     <h1>Los <span>geht's</span> 👋</h1>
                     <p>Hi, jetzt gleich erwarten dich ein paar Fragen, die uns helfen werden deine Anfrage besser beurteilen zu können. Bitte, nimm dir genug Zeit, alle Frage in Ruhe und vollständig auszufühlen. Bereit?</p>
@@ -87,15 +102,21 @@ class Umfrage extends Component {
                     <form name="umfrage" method="POST" data-netlify="true">
                         <div>
                             {this.state.data.map((elt) =>
-                                <div id="array" name="array">
+                                <div>
                                     <label name="frage" value={elt.frage}>{elt.frage}</label>
                                     <label className="antwort" name="antwort" value={elt.antwort}>{elt.antwort}</label>
                                 </div>)}
                         </div>
                         <div className="senden">
-                            <input type="submit" value="Senden"></input>
+                            <input type="submit" value="Senden" onClick={this.senden}></input>
+
                         </div>
                     </form>
+                </article>
+                <article className="beenden" style={this.state.display2 ? { display: "none" } : { display: "block" }} >
+                    <h1>🎉YEAH <span>YEAH</span>🎉</h1>
+                    <p>Deine Anfrage wurde an uns versendet. Du erhälst in kürze per Mail eine Bestätigung. Wir werden alle Angaben prüfen und uns zeitnah bei dir melden.</p>
+                    <button onClick={this.props.vonUnten}>Beenden</button>
                 </article>
             </section>
 

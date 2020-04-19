@@ -2,11 +2,14 @@
  *{
      padding: 5px;
  }
- 
- #Supercode-hilft{
+ .Supercode-hilft{
+   height: 100vh;
+   display: grid;
+   grid-template-rows: 90vh auto;
+ }
+ .Supercode-hilft>div{
     display: grid;
     grid-template-columns: 60% auto;
-    height: 100vh;
     background: rgba(0, 222, 172);
   }
  
@@ -33,12 +36,11 @@
   .text2 p{
     padding-bottom: 5vh;
   }
-  #Supercode-hilft img {
+  .Supercode-hilft img {
     height: 100%;
     width: 100%;
   }
- 
-  #Supercode-hilft h1{
+  .Supercode-hilft h1{
       font-size: 3rem;
   }
   .text2 button:first-of-type{
@@ -46,6 +48,7 @@
   }
   .ls{
     font-size: 0.8rem;
+<<<<<<< HEAD
   }
 
 /******************************** footer   */
@@ -115,3 +118,11 @@
     margin-left: 10vw;
   }
 }
+=======
+
+  }
+  .Supercode-hilft footer{
+    width: 100%;
+    background-color: #fff;
+  }
+>>>>>>> 300188491f63eae9b9e9f72daa41665ae83f1cc8

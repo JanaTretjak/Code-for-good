@@ -1,6 +1,7 @@
 .umfrage{
     background: url(background.svg) bottom/contain no-repeat;
     height: 100vh;
+    background-color: #fff;
 }
 .umfrage .losGehts{
     color: #3dd7ac;
@@ -129,6 +130,10 @@ button.btn.striped-shadow:before {
 .fragen{
     padding-top: 35vh;
 }
+.fragen form{
+  position: relative;
+  height: 65vh;
+}
 .fragen label:first-of-type{
     margin-left: 25%;
     font-size: 1.4rem;
@@ -220,9 +225,26 @@ button.btn.striped-shadow:before {
   border-left: 3px solid #3dd7ac;
 }
 .senden{
-text-align: center;
-}
+  text-align: center;
+} 
 .senden input{
   width: 10vh;
   margin: 0 auto;
+}
+
+.beenden{
+  text-align: center;
+  padding-top: 30vh;
+}
+.beenden h1{
+  font-size: 5rem;
+  font-weight: 900;
+  color: #3dd7ac;
+  padding-bottom: 3vh;
+}
+.beenden p{
+  color: #3dd7ac;
+  width: 40%;
+  margin: 0 auto;
+  padding-bottom: 3vh;
 }
