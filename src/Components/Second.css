@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+  
+}
+.second-page{
+    background: white;
+    
+}
+.second-box{
+    display: grid;
+    grid-template-columns: repeat(12, 12fr);
+    grid-template-rows: repeat(12, 12fr);
+    height: 100vh;
+}
+.second-box h1{
+    color: rgba(0, 222, 172);
+    grid-column: 3/13;
+    grid-row: 3/8;
+    font-size: 3.5rem;
+}
+.second-box h1 span{
+    color: white;
+    text-shadow: rgba(0, 222, 172) 1px 0 0px, rgba(0, 222, 172) 0 1px 0px, rgba(0, 222, 172) -1px 0 0px, rgba(0, 222, 172) 0 -1px 0px;
+    
+}
+.second-box p{
+    margin-top: 15vh;
+    line-height: 1.5;
+    display: grid;
+    color: #745cf9;
+    grid-column: 3/12;
+    grid-row: 6/7;
+    padding-top: 30px;
+    font-size: 1.5rem;
+}
+.button-mehr {
+    grid-column: 3/5;
+    grid-row: 9/10;
+    background-color: #745cf9;;
+    text-align: center;
+    padding-top: 8%;
+    text-decoration: none;
+    color: white;
+}
+.button-gehts{
+    grid-column: 6/8;
+    grid-row: 9/10;
+    background-color: rgba(0, 222, 172);
+    text-align: center;
+    padding-top: 8%;
+    text-decoration: none;
+}
+.streifen{
+    background: rgba(0, 222, 172);
+    grid-column: 1/1;
+    grid-row: 1/13;
+}
+
+@media only screen and (max-width: 900px){
+    .second-box h1{
+        color: rgba(0, 222, 172);
+        grid-column: 3/11;
+        font-size: 2rem;
+    } 
+    .button-gehts{
+        grid-column: 8/11;
+        grid-row: 9/10;
+    }
+    .button-mehr {
+        grid-column: 3/7;
+        grid-row: 9/10;
+    }
+}
+
