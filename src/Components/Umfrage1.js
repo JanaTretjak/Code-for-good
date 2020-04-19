@@ -12,7 +12,7 @@ class Umfrage extends Component {
         display: true,
         display0: true,
         display1: false,
-        display2: false,
+        display2: true,
         data: data,
         i: 0,
         frage: data[0].frage,
