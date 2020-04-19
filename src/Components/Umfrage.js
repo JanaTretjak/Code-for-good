@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import data from "./data"
 import Form from './Form';
 import "./umfrage.css"
-import Senden from './Senden';
-import ProgressButton from './Senden';
+//import Senden from './Senden';
+//import ProgressButton from './Senden';
 
 class Umfrage extends Component {
     state = {
@@ -78,14 +78,7 @@ class Umfrage extends Component {
         this.setState({ display1: !this.state.display1 });
         this.setState({ display2: !this.state.display1 });
     }
-
-    beenden = () => {
-        // this.setState({ data: this.props.data });
-        console.log("test")
-    }
-    vonUnten = () => {
-
-    }
+    handleChange1 = e => this.setState({ [e.target.name]: e.target.value });
     render() {
 
         return (
@@ -104,7 +97,8 @@ class Umfrage extends Component {
                             {this.state.data.map((elt) =>
                                 <div>
                                     <label name="frage" value={elt.frage}>{elt.frage}</label>
-                                    <label className="antwort" name="antwort" value={elt.antwort}>{elt.antwort}</label>
+                                    <label className="antwort" name="antwort0" value={elt.antwort}>{elt.antwort}</label>
+                                    {/* <input className="antwort" type="text" name={`antwort`} value={elt.antwort} onChange={this.handleChange1} /> */}
                                 </div>)}
                         </div>
                         <div className="senden">
