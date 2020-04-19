@@ -31,6 +31,11 @@ class First extends Component {
                                 <p>Interessierte Unternehmen können sich online melden. Nach einem kurzem online Briefing
                                 Interview prüft eine unabhängige Jury die Möglichkeiten und schlägt dem Unternehmen
                         Projektpartner für eine kostenfreie Beratung und Umsetzung von Möglichkeiten vor.</p>
+<<<<<<< HEAD
+                        <div>
+                            <button className="btn striped-shadow violet ls first-button"><span>ERFAHRE MEHR</span></button>
+                            <button className="btn striped-shadow violet ls sescond-button"><span>LOS GEHT'S</span></button>
+=======
                                 <div>
                                     <button className="btn striped-shadow violet ls" onClick={this.props.vonOben}><span>FRAGEN?</span></button>
                                     <button className="btn striped-shadow violet ls" onClick={this.props.vonUnten}><span>LOS GEHT'S</span></button>
@@ -38,6 +43,7 @@ class First extends Component {
                             </div>
 
 
+>>>>>>> 300188491f63eae9b9e9f72daa41665ae83f1cc8
                         </div>
                     </div>
                     <img src={foto} alt="" />
@@ -52,9 +58,27 @@ class First extends Component {
     }
 }
 
+<<<<<<< HEAD
+                </div>
+            </div>
+            <div className="first-img"><img src="https://www.unsplash.it/1000/1000" alt="" />
+            </div>
+            <div className="footer">
+                <h1>Unsere Partner</h1>
+                <a href="#"><img src="../Components/img/blanko_logo.svg" alt=""></img></a>
+                <a href="#"><img src="./Components/img/super(code).png" alt=""></img></a>
+                <a href="#"><img src="//Components/img/blanko_logo.svg" alt=""></img></a>
+                <a href="#"><img src="./Components/img/image 10.png" alt=""></img></a>
+                <a href="#"><img src="assets/img/image 9.png" alt=""></img></a>
+                <a href="#"><img src="assets/img/sourcetree logo_png 1.png" alt=""></img></a>
+            </div>
+        </section>
+        
+=======
 export default First;
 
 // function First(props) {
+>>>>>>> 300188491f63eae9b9e9f72daa41665ae83f1cc8
 
 //     return (
 

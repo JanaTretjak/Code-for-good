@@ -5,13 +5,12 @@ class Second extends Component {
     state = {}
     render() {
         return (
-            <div>
-                <section className="container" >
-                    <h1>SuperCode hilft - <br /> Digitalisierungsinitiative für <br />
-                kleine Unternehmen in <br />Düsseldorf</h1>
-                    <br />
+            <div className="second-page">
+                <section className="container second-box" >
+                    <h1><span> SuperCode hilft -</span> <br /> Digitalisierungsinitiative für <br />
+                kleine Unternehmen in <br />Düsseldorfю</h1>
                     <p>
-                        Kostenlose Unterstützung für Einzelhändler, <br /> Gastronomen, Handwerker, Dienstleister,
+                    Kostenlose Unterstützung für Einzelhändler, <br /> Gastronomen, Handwerker, Dienstleister,
                     NGOs und Vereine
                 </p>
                     <button onClick={this.props.vonRechts}>Erfahre Mehr</button>

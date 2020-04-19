@@ -23,6 +23,7 @@ class ContactForm extends Component {
                     <input type="email" placeholder="EMAIL"></input>
                     <input type="number" placeholder="TELEFONNUMMER"></input>
                     <textarea placeholder="NACHRICHT"></textarea>
+                    <button className="anim">Senden</button>
                 </div>
             </div>
         );
