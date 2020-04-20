@@ -21,6 +21,7 @@ class Umfrage extends Component {
         i: 0,
         frage: data[0].frage,
         antwort: {},
+        name: {},
         value: '',
         buttonState: '',
         button: "Senden"
@@ -38,7 +39,6 @@ class Umfrage extends Component {
         event.preventDefault();
         if (this.state.data[this.state.i].antwort === undefined) {
             if (this.state.value === "") {
-                // this.state.data[this.state.i].antwort = undefined
                 this.setState({ data: this.state.data });
             } else {
                 this.state.data[this.state.i].antwort = this.state.value
@@ -69,16 +69,13 @@ class Umfrage extends Component {
         });
     }
     handleSubmit = e => {
-        // setTimeout(() => {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "umfrage", ...this.state })
         })
-
-        //         .then(() => alert("Success!"))
-        //         .catch(error => alert(error));
-        // }, 3500)
+            .then(() => console.log("Success!"))
+            .catch(error => console.log(error));
         e.preventDefault();
     };
     before = (event) => {
@@ -90,16 +87,6 @@ class Umfrage extends Component {
                 i: this.state.i
             });
         }
-    }
-    handleChange1 = e => {
-        this.setState({ [e.target.name]: this.state.data[this.state.i].antwort });
-        console.log(e.target.name)
-        console.log(e.target)
-        if (e.target.name === "" || e.target.name === null || e.target.name === undefined) {
-            this.setState({ [e.target.name]: e.target.value });
-        }
-        console.log(e.target)
-        console.log(e.target.value)
     }
     // handleChange1 = e => this.setState({ [e.target.name]: e.target.value });
     senden = (e) => {
@@ -130,7 +117,7 @@ class Umfrage extends Component {
                     <button className="start btn striped-shadow violet st" onClick={this.start}><span>Start</span></button>
                 </article>
                 <article className="fragen" style={this.state.display0 ? { display: "none" } : { display: "block" }} >
-                    <Form before={this.before} next={this.next} handleChange={this.handleChange} frage={this.state.frage} value={this.state.value} />
+                    <Form before={this.before} next={this.next} handleChange={this.handleChange} frage={this.state.frage} value={this.state.value} i={this.state.i} name={this.state.titel} />
                 </article>
                 <article className="endForm" style={this.state.display1 ? { display: "block" } : { display: "none" }}>
                     <form onSubmit={this.handleSubmit} name="umfrage">
@@ -138,8 +125,8 @@ class Umfrage extends Component {
                             {this.state.data.map((elt, i) =>
                                 <div id="array" name="array">
                                     <label name="frage" value={elt.frage}>{elt.frage}</label>
-                                    <label className="antwort" name={`antwort${i}`} value={elt.antwort}>{elt.antwort}</label>
-                                    <input className="antwort" type="text" name={`antwort${i}`} placeholder={elt.antwort} onChange={this.handleChange1} />
+                                    <label className="antwort" name="antwort" value={elt.antwort}>{elt.antwort}</label>
+                                    {/* <input className="antwort" type="text" name={`antwort${i}`} placeholder={elt.antwort} onChange={this.handleChange1} /> */}
                                 </div>)
                             }
                         </div>

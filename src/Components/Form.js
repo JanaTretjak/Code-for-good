@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
+import data from "./data"
 
 
 class Form extends Component {
-
+    state = {
+        data: data,
+    }
     render() {
         return (
             <form>
                 <div className={this.props.action ? "moveUp" : "up"}>
-                    <label>{this.props.frage}</label>
-                    <input type="text" onChange={this.props.handleChange} value={this.props.value} placeholder="schreibe hier deine Antwort..."></input>
+                    <label name={this.props.name}>{this.props.frage}</label>
+                    <input type="text" onChange={this.props.handleChange} name={this.state.data[this.props.i].titel} value={this.props.value} placeholder="schreibe hier deine Antwort..."></input>
                 </div>
                 <div className="bottom">
                     <div>
