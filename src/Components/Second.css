@@ -75,18 +75,63 @@
     grid-column: 5/6;
     grid-row: 8/9;
 }
+
+
+/* @media only screen and (max-width: 1200px){
+    .second-box h1{
+        grid-column: 3/13;
+        font-size: 3rem;
+        word-wrap: break-word;
+        line-height: 1.2;
+    } 
+    .losGehts{
+        grid-column: 4/7;
+        grid-row: 10/11;
+    }
+    .erfahreMehr {
+        grid-column: 4/7;
+        grid-row: 8/9;
+    }
+} */
 @media only screen and (max-width: 900px){
     .second-box h1{
         color: rgba(0, 222, 172);
-        grid-column: 3/11;
-        font-size: 2rem;
+        grid-column: 3/12;
+        font-size: 2.3rem;
+        word-wrap: break-word;
+        line-height: 1.6;
     } 
-    .button-gehts{
-        grid-column: 8/11;
+    .second-box p{
+        line-height: 1.2;
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+    .losGehts{
+        grid-column: 10/11;
         grid-row: 9/10;
     }
-    .button-mehr {
-        grid-column: 3/7;
+    .erfahreMehr {
+        grid-column: 4/7;
         grid-row: 9/10;
+    }
+}
+@media only screen and (max-width: 600px){
+    .second-box h1{
+        grid-column: 3/12;
+        word-wrap: break-word;
+        line-height: .9;
+        font-size: 2rem;
+    }
+    .second-box p{
+        line-height: .9;
+        font-size: 1.3rem;
+    }
+    .losGehts{
+        grid-column: 9/10;
+        grid-row: 8/9;
+    }
+    .erfahreMehr {
+        grid-column: 9/10;
+        grid-row: 10/11;
     }
 }

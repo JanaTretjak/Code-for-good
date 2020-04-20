@@ -67,6 +67,7 @@ input[type=number] {
 
 .contact-input ::placeholder{
     color: white;
+    font-size: 1rem;
 }
 
 .contact-input :nth-child(6){
@@ -77,30 +78,18 @@ input[type=number] {
     font-size: 1rem;
     border: 2px solid white;
 }
-/* .contact-input :nth-child(6):hover{
-        display: inline-block;
-        box-shadow: 1px 1px 10px 3px hsla(0, 0%, 0%, .6);
-      }
-      
-.contact-input :nth-child(6):hover.anim {
-        animation: send 2.5s ease-in infinite 100ms;
-      }
-      
-      @keyframes send {
-        48%, 62% {
-          transform: scale(1.0, 1.0)
-        }
-        50% {
-          transform: scale(1.1, 0.9)
-        }
-        56% {
-          transform: scale(0.9, 1.1) translate(0, -5px)
-        }
-        59% {
-          transform: scale(1.0, 1.0) translate(0, -3px)
-        }
-      }  */
-
+.contact-input :nth-child(7){
+    background-color: #5D3EDE;
+    padding: 15px 0;
+    border: 2px solid white;
+    font-size: 1.5rem;
+    color: white;
+}
+.contact-input :nth-child(7):hover{
+    background-color: white;
+    border: 2px solid #60D7AC;
+    color: #5D3EDE;
+}
 
 
 @media only screen and (max-width: 600px){
@@ -108,6 +97,7 @@ input[type=number] {
         grid-template-columns: 1fr;
         height: 100%;
         width: auto;
+        background-color: white;
     }
     .contact-text{
         margin-top: 5vh;
@@ -127,6 +117,7 @@ input[type=number] {
     .contact-box{
         height: 100%;
         width: auto;
+        background-color: white;
     }
     .contact-text{
         margin-top: 5vh;
