@@ -16,8 +16,8 @@ class Second extends Component {
                         Kostenlose Unterstützung für Einzelhändler, <br /> Gastronomen, Handwerker, Dienstleister,
                     NGOs und Vereine
                 </p>
-                    <button onClick={() => { history.push('/contact') }} className="erfahreMehr">Erfahre Mehr</button>
-                    <button className="btn striped-shadow violet ls" onClick={() => { history.push('/umfrage') }}><span>LOS GEHT'S</span></button>
+                    <button onClick={() => { history.push('/interesse') }} className="btn striped-shadow violet ls erfahreMehr"><span>Erfahre Mehr</span></button>
+                    <button className="btn striped-shadow violet ls losGehts" onClick={() => { history.push('/umfrage') }}><span>LOS GEHT'S</span></button>
                     <div className="streifen"></div>
                     <button className="untenLinks" onClick={() => { history.push('/interesse') }}>≫</button>
                     <button className="obenRechts" onClick={() => { history.push('/contact') }}>≪</button>

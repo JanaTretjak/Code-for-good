@@ -98,7 +98,7 @@ class Umfrage extends Component {
         if (e.target.name === "" || e.target.name === null || e.target.name === undefined) {
             this.setState({ [e.target.name]: e.target.value });
         }
-        console.log(e.target)
+        console.log(e.target.name)
         console.log(e.target.value)
     }
     // handleChange1 = e => this.setState({ [e.target.name]: e.target.value });
