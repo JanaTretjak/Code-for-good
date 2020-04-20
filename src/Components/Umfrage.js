@@ -38,7 +38,6 @@ class Umfrage extends Component {
         event.preventDefault();
         if (this.state.data[this.state.i].antwort === undefined) {
             if (this.state.value === "") {
-                // this.state.data[this.state.i].antwort = undefined
                 this.setState({ data: this.state.data });
             } else {
                 this.state.data[this.state.i].antwort = this.state.value
@@ -69,16 +68,14 @@ class Umfrage extends Component {
         });
     }
     handleSubmit = e => {
-        // setTimeout(() => {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "umfrage", ...this.state })
+            body: encode({ "form-name": "umfrage", ...this.state.data[this.state.i].frage })
         })
 
-        //         .then(() => alert("Success!"))
-        //         .catch(error => alert(error));
-        // }, 3500)
+            .then(() => console.log("Success!"))
+            .catch(error => console.log(error));
         e.preventDefault();
     };
     before = (event) => {
