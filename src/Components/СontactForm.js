@@ -1,12 +1,13 @@
 //import React from 'react';
 import React, { Component } from 'react';
 import "./contactForm.css";
+import history from './history'
 
 class ContactForm extends Component {
     state = {}
     render() {
         return (
-            <div className={`contact-box ${this.props.expend ? "SearchPage" : "SearchPageBack"}`}>
+            <div className={`contact-box `}>
                 <div className="contact-text">
                     <h1>
                         Hi, wie können wir dir <span>helfen?</span>
@@ -17,7 +18,7 @@ class ContactForm extends Component {
                     <p>Ratherstr.25 40476 Düsseldorf</p>
                 </div>
                 <div className="contact-input">
-                    <button className="kreuz" onClick={this.props.vonLinks}></button>
+                    <button className="kreuz" onClick={() => { history.push('/') }}></button>
                     <input type="text" placeholder="VORNAME"></input>
                     <input type="text" placeholder="NAME"></input>
                     <input type="email" placeholder="EMAIL"></input>
