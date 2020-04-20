@@ -91,17 +91,7 @@ class Umfrage extends Component {
             });
         }
     }
-    handleChange1 = e => {
-        this.setState({ [e.target.name]: this.state.data[this.state.i].antwort });
-        console.log(e.target.name)
-        console.log(e.target)
-        if (e.target.name === "" || e.target.name === null || e.target.name === undefined) {
-            this.setState({ [e.target.name]: e.target.value });
-        }
-        console.log(e.target.name)
-        console.log(e.target.value)
-    }
-    // handleChange1 = e => this.setState({ [e.target.name]: e.target.value });
+    handleChange1 = e => this.setState({ [e.target.name]: e.target.value });
     senden = (e) => {
         //e.preventDefault();
         this.setState({ display1: !this.state.display1 });
