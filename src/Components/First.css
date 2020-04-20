@@ -4,12 +4,11 @@
    grid-template-rows: auto 12vh;
    box-sizing: content-box;
  }
- .Supercode-hilft>div{
+ .hilft-box{
     display: grid;
-    grid-template-columns: 60% auto;
+    grid-template-columns: 60% 40%;
     background: rgba(0, 222, 172);
   }
- 
   .main {
     display: flex;
     font-weight: 100;
@@ -33,9 +32,9 @@
   .text2 p{
     padding-bottom: 5vh;
   }
-  .Supercode-hilft img {
-    height: 100%;
-    width: 100%;
+  .macair-img{
+    overflow: hidden;
+    height: 88vh;
   }
   .Supercode-hilft h1{
       font-size: 3rem;
@@ -49,6 +48,9 @@
 footer{
   display: flex;
   padding: 1vh 0 0;
+}
+.macair-img{
+  background: url(fotozip.png) center/cover no-repeat;
 }
 /******************************** footer   */
 .footer{
@@ -66,7 +68,67 @@ footer{
 }
 /****************************** media */
 
-@media only screen and (max-width: 900px){
+
+@media only screen and (max-width: 600px){
+  .hilft-box{
+    grid-template-columns: 100%;
+    width: 100%;
+    margin-top: 0;
+  }
+  .macair-img{
+    display: none;
+  }
+  .text1{
+    display: none;
+  }
+  .first-img{
+    display: none;
+  }
+  .Supercode-hilft{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 0;
+  }
+  .text2{
+      width: 80%;
+      margin-left: 0;
+      margin-top: 0;
+  }
+  .second-button{
+    margin-left: 10vw;
+  }
+  .text{
+    margin-bottom: 3vh;
+    margin-top: 0;
+  }
+  .Supercode-hilft h1{
+    font-size: 2rem;
+  }
+  .footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .buttons-fragen-los{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  .loss, .frag{
+    margin-left: 20%;
+  }
+  .frag{
+    margin-top: -2vh;
+  }
+  .loss{
+    margin-top: 3vh;
+  }
+}
+.footer img{
+  height: 3vh;
+}
+/* @media only screen and (max-width: 1200px){
   .first-img{
     display: none;
   }
@@ -81,32 +143,14 @@ footer{
     margin-top: 5vh;
     margin-left: 10vw;
   }
-  #Supercode-hilft{
-    grid-template-columns: 100%;
+  .Supercode-hilft{
+    grid-template-columns: 50% 50%;
   }
-}
-@media only screen and (max-width: 600px){
-  .text1{
+  .macair-img{
     display: none;
   }
-  .first-img{
-    display: none;
-  }
-  #Supercode-hilft{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 100%;
-  }
-  .text2{
-      width: 90%;
-      margin-left: 5%;
-  }
-  .second-button{
-    margin-left: 10vw;
-  }
-  #Supercode-hilft h1{
-    font-size: 2rem;
+  .hilft-box{
+    grid-template-columns: 50% 50%;
   }
 }
 @media only screen and (max-width: 400px){
@@ -116,5 +160,6 @@ footer{
   .first-button{
     margin-left: 10vw;
   }
-}
+} */
   
+/* <img src={foto} alt="" /> */
