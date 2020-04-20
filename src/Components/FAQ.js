@@ -40,6 +40,11 @@ function FAQ() {
             answer: 'Das wird funktionieren3',
             open: false
         },
+        {
+            question: 'Das ist die erste Frage3?',
+            answer: 'Das wird funktionieren3',
+            open: false
+        }
     ]);
 
     const toggleFAQ = index => {
@@ -70,6 +75,7 @@ function FAQ() {
 
 
         </div >
+
 
 
 
