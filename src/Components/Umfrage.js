@@ -11,12 +11,16 @@ const encode = (data) => {
         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
         .join("&");
 }
+
+
 class Umfrage extends Component {
     state = {
         display: true,
         display0: true,
         display1: false,
         display2: true,
+        displayFrage1: true,
+        displayFrage2: true,
         data: data,
         i: 0,
         frage: data[0].frage,
@@ -24,7 +28,7 @@ class Umfrage extends Component {
         name: {},
         value: '',
         buttonState: '',
-        button: "Senden"
+        button: "Senden",
     }
     start = () => {
         this.setState({ display: false });
@@ -67,6 +71,14 @@ class Umfrage extends Component {
         }, () => {
             this.setState({ value: '' })
         });
+        if (this.state.i === this.state.data.length - 1) {
+            const data = new FormData()
+            data.append('file', this.state.selectedFile)
+            // const element = <input type="file" onChange={this.props.onChangeHandler} name={this.state.data[11].titel} placeholder="hänge hier Dateien an..." ></input>
+            // ReactDOM.render(element, document.getElementById('file'));
+        }
+        console.log(this.state.i)
+        console.log(this.state.data.length - 1)
     }
     handleSubmit = e => {
         fetch("/", {
@@ -107,6 +119,7 @@ class Umfrage extends Component {
             this.setState({ display2: !this.state.display2 });
         }, 4500)
     }
+
     render() {
 
         return (
