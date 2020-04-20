@@ -91,7 +91,7 @@ class Umfrage extends Component {
             });
         }
     }
-    handleChange1 = e => this.setState({ [e.target.name]: e.target.value });
+    // handleChange1 = e => this.setState({ [e.target.name]: e.target.value });
     senden = (e) => {
         //e.preventDefault();
         this.setState({ display1: !this.state.display1 });
@@ -120,7 +120,7 @@ class Umfrage extends Component {
                     <button className="start btn striped-shadow violet st" onClick={this.start}><span>Start</span></button>
                 </article>
                 <article className="fragen" style={this.state.display0 ? { display: "none" } : { display: "block" }} >
-                    <Form before={this.before} next={this.next} handleChange={this.handleChange} frage={this.state.frage} value={this.state.value} />
+                    <Form before={this.before} next={this.next} handleChange={this.handleChange} frage={this.state.frage} value={this.state.value} i={this.state.i} />
                 </article>
                 <article className="endForm" style={this.state.display1 ? { display: "block" } : { display: "none" }}>
                     <form onSubmit={this.handleSubmit} name="umfrage">
@@ -129,7 +129,7 @@ class Umfrage extends Component {
                                 <div id="array" name="array">
                                     <label name="frage" value={elt.frage}>{elt.frage}</label>
                                     <label className="antwort" name={`antwort${i}`} value={elt.antwort}>{elt.antwort}</label>
-                                    <input className="antwort" type="text" name={`antwort${i}`} placeholder={elt.antwort} onChange={this.handleChange1} />
+                                    {/* <input className="antwort" type="text" name={`antwort${i}`} placeholder={elt.antwort} onChange={this.handleChange1} /> */}
                                 </div>)
                             }
                         </div>
