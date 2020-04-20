@@ -1,12 +1,12 @@
-
- *{
-     padding: 5px;
+ .Supercode-hilft{
+   height: 100vh;
+   display: grid;
+   grid-template-rows: auto 12vh;
+   box-sizing: content-box;
  }
- 
- #Supercode-hilft{
+ .Supercode-hilft>div{
     display: grid;
     grid-template-columns: 60% auto;
-    height: 100vh;
     background: rgba(0, 222, 172);
   }
  
@@ -33,12 +33,11 @@
   .text2 p{
     padding-bottom: 5vh;
   }
-  #Supercode-hilft img {
+  .Supercode-hilft img {
     height: 100%;
     width: 100%;
   }
- 
-  #Supercode-hilft h1{
+  .Supercode-hilft h1{
       font-size: 3rem;
   }
   .text2 button:first-of-type{
@@ -47,3 +46,75 @@
   .ls{
     font-size: 0.8rem;
   }
+footer{
+  display: flex;
+  padding: 1vh 0 0;
+}
+/******************************** footer   */
+.footer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+}
+.footer img{
+  height: 6vh;
+}
+.footer h1{
+  font-size: 1.2rem;
+}
+/****************************** media */
+
+@media only screen and (max-width: 900px){
+  .first-img{
+    display: none;
+  }
+  .text1 .text2{
+    width: 90%;
+  }
+  .second-button{
+    margin-top: 5vh;
+    margin-left: 10vw;
+  }
+  .first-button{
+    margin-top: 5vh;
+    margin-left: 10vw;
+  }
+  #Supercode-hilft{
+    grid-template-columns: 100%;
+  }
+}
+@media only screen and (max-width: 600px){
+  .text1{
+    display: none;
+  }
+  .first-img{
+    display: none;
+  }
+  #Supercode-hilft{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .text2{
+      width: 90%;
+      margin-left: 5%;
+  }
+  .second-button{
+    margin-left: 10vw;
+  }
+  #Supercode-hilft h1{
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 400px){
+  .second-button{
+    margin-top: 5vh;
+  }
+  .first-button{
+    margin-left: 10vw;
+  }
+}
+  
