@@ -21,6 +21,7 @@ class Umfrage extends Component {
         i: 0,
         frage: data[0].frage,
         antwort: {},
+        name: {},
         value: '',
         buttonState: '',
         button: "Senden"
@@ -116,14 +117,14 @@ class Umfrage extends Component {
                     <button className="start btn striped-shadow violet st" onClick={this.start}><span>Start</span></button>
                 </article>
                 <article className="fragen" style={this.state.display0 ? { display: "none" } : { display: "block" }} >
-                    <Form before={this.before} next={this.next} handleChange={this.handleChange} frage={this.state.frage} value={this.state.value} i={this.state.i} />
+                    <Form before={this.before} next={this.next} handleChange={this.handleChange} frage={this.state.frage} value={this.state.value} i={this.state.i} name={this.state.name} />
                 </article>
                 <article className="endForm" style={this.state.display1 ? { display: "block" } : { display: "none" }}>
                     <form onSubmit={this.handleSubmit} name="umfrage">
                         <div>
                             {this.state.data.map((elt, i) =>
                                 <div id="array" name="array">
-                                    <label name={elt.frage} value={elt.frage}>{elt.frage}</label>
+                                    <label name={elt.name} value={elt.frage}>{elt.frage}</label>
                                     <label className="antwort" name={elt.name} value={elt.antwort}>{elt.antwort}</label>
                                     {/* <input className="antwort" type="text" name={`antwort${i}`} placeholder={elt.antwort} onChange={this.handleChange1} /> */}
                                 </div>)
