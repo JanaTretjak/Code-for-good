@@ -71,9 +71,8 @@ class Umfrage extends Component {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "umfrage", ...this.state.data[this.state.i].frage })
+            body: encode({ "form-name": "umfrage", ...this.state })
         })
-
             .then(() => console.log("Success!"))
             .catch(error => console.log(error));
         e.preventDefault();
@@ -124,7 +123,7 @@ class Umfrage extends Component {
                         <div>
                             {this.state.data.map((elt, i) =>
                                 <div id="array" name="array">
-                                    <label name="frage" value={elt.frage}>{elt.frage}</label>
+                                    <label name={elt.frage} value={elt.frage}>{elt.frage}</label>
                                     <label className="antwort" name={`antwort${i}`} value={elt.antwort}>{elt.antwort}</label>
                                     {/* <input className="antwort" type="text" name={`antwort${i}`} placeholder={elt.antwort} onChange={this.handleChange1} /> */}
                                 </div>)

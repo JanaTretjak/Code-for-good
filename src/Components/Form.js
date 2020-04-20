@@ -7,7 +7,7 @@ class Form extends Component {
         return (
             <form>
                 <div className={this.props.action ? "moveUp" : "up"}>
-                    <label>{this.props.frage}</label>
+                    <label name={this.props.frage}>{this.props.frage}</label>
                     <input type="text" onChange={this.props.handleChange} name={`antwort${this.props.i}`} value={this.props.value} placeholder="schreibe hier deine Antwort..."></input>
                 </div>
                 <div className="bottom">
