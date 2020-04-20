@@ -48,20 +48,25 @@
   }
   .ls{
     font-size: 0.8rem;
-<<<<<<< HEAD
   }
-
+footer{
+  display: flex;
+}
 /******************************** footer   */
 .footer{
-  margin: 0;
-  grid-column: 1/3;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   background-color: white;
+  width: 100%;
+  margin: 0 5vh;
 }
 .footer h1{
   font-size: 20px;
+}
+.Supercode-hilft footer{
+  width: 100%;
+  background-color: #fff;
 }
 
 
@@ -118,11 +123,4 @@
     margin-left: 10vw;
   }
 }
-=======
-
-  }
-  .Supercode-hilft footer{
-    width: 100%;
-    background-color: #fff;
-  }
->>>>>>> 300188491f63eae9b9e9f72daa41665ae83f1cc8
+  
