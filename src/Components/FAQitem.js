@@ -1,5 +1,5 @@
 import React from 'react'
-
+// Die Fragen werden hier verdeckt bzw offengelegt
 function FAQitem({ faq, index, toggleFAQ }) {
     return (
         <div className={"faq" + (faq.open ? 'open' : ' ')}
