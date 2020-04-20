@@ -124,7 +124,7 @@ class Umfrage extends Component {
                             {this.state.data.map((elt, i) =>
                                 <div id="array" name="array">
                                     <label name={elt.frage} value={elt.frage}>{elt.frage}</label>
-                                    <label className="antwort" name={elt.frage} value={elt.antwort}>{elt.antwort}</label>
+                                    <label className="antwort" name={elt.name} value={elt.antwort}>{elt.antwort}</label>
                                     {/* <input className="antwort" type="text" name={`antwort${i}`} placeholder={elt.antwort} onChange={this.handleChange1} /> */}
                                 </div>)
                             }
