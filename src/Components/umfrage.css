@@ -137,7 +137,6 @@ button.btn.striped-shadow:before {
 .fragen label:first-of-type{
     margin-left: 25%;
     font-size: 1.4rem;
-
 }
 .fragen input[type="text"]{
     display: block;
@@ -160,20 +159,15 @@ button.btn.striped-shadow:before {
     right: 15vh;
     display: inline-flex;
     align-items: center;
-
 }
 .fragen .bottom button{
     background-color: #3dd7ac;
     font-size: 3rem;
     margin: 0 0.5vh 0 0;
     padding: 0vh 2vh;
-    color: #fff;
-    
+    color: #fff; 
 }
-/* .fragen button:nth-of-type(2):active div{
-  position: relative;
-  animation: move 1.5s ease;
-} */
+
 .fragen .bottom label{
     display: inline-block;
     font-size: 0.7rem;
@@ -265,4 +259,104 @@ button.btn.striped-shadow:before {
 .senden {
   width: 20vh;
   margin: 0 auto;
+}
+.umfrage span{
+  text-shadow: #60D7AC 1px 0 0px, #60D7AC 0 1px 0px, #60D7AC -1px 0 0px, #60D7AC 0 -1px 0px;
+  color: white;
+}
+.pb-container span{
+  text-shadow: #60D7AC 1px 0 0px, #60D7AC 0 1px 0px, #60D7AC -1px 0 0px, #60D7AC 0 -1px 0px;
+  color: white;
+}
+
+/**************************** media */
+
+@media only screen and (max-width: 900px){
+  .fragen div:first-of-type{
+    margin-left: 10%;
+  }
+  .fragen label:first-of-type{
+    margin-left: 0;
+    font-size: 1.2rem;
+   width: 100%;
+
+}
+.fragen input[type="text"]{
+  margin-left: 0%;
+  font-size: 1.3rem;
+  margin-top: 2vh;
+  width: 280px;
+  border-left: 3px solid #3dd7ac;
+  padding-left: 1vh;
+  color: #3dd7ac;
+}
+.fragen{
+  padding-top: 20vh;
+}
+.fragen form{
+position: relative;
+height: 80vh;
+}
+.fragen .bottom{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 30vh;
+  margin-left: 60%;
+  margin-right: 0;
+}
+.fragen .bottom div{
+  display: flex;
+  margin-bottom: 5vh;
+}
+.fragen .bottom label{
+  display: block;
+  font-size: 0.7rem;
+  margin-left: 0;
+  padding: 1.8vh 5vh 1.8vh 2vh;
+}
+.umfrage .losGehts{
+  height: 100vh;
+  padding-top: 0;
+}
+.umfrage .losGehts h1{
+  padding-top: 20vh;
+  font-size: 3rem;
+}
+.umfrage .losGehts p{
+  width: 60%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+.umfrage{
+  background: url(background.svg) bottom/cover no-repeat;
+  height: 100%;
+  background-color: #fff;
+}
+.umfrage .endForm{
+  height: 100%;
+  background: none;
+}
+.endForm form>div:first-of-type{
+  /* background: url(background.svg) bottom/cover no-repeat; */
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-template-rows: repeat(12, 8vh); */
+  /* overflow: hidden; */
+  padding: 10vh 10vh 5vh;
+  height: 100%;
+}
+.beenden{
+  text-align: center;
+  padding-top: 0vh;
+  height: 100vh;
+}
+.beenden h1{
+  padding-top: 15vh;
+  font-size: 4rem;
+}
+.beenden p{
+  width: 80%;
+  line-height: 3vh;
+}
 }

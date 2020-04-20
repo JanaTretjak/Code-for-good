@@ -112,6 +112,9 @@ input[type=number] {
         justify-content: space-evenly;
         margin-bottom: 5vh;
     }
+    .anim{
+        margin-bottom: 5vh;
+    }
 }
 @media only screen and (max-width: 900px){
     .contact-box{
@@ -129,6 +132,9 @@ input[type=number] {
     .contact-input{ 
         margin-top: 15vh;
         margin-right: 10%;
+        margin-bottom: 5vh;
+    }
+    .anim{
         margin-bottom: 5vh;
     }
 }

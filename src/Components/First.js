@@ -23,7 +23,7 @@ class First extends Component {
     render() {
         return (
             <section className={`Supercode-hilft `}>
-                <div>
+                <div className="hilft-box">
                     <div className="main">
                         <div className="text">
                             <div className="text1">
@@ -44,15 +44,15 @@ class First extends Component {
                                 <p>Interessierte Unternehmen können sich online melden. Nach einem kurzem online Briefing
                                 Interview prüft eine unabhängige Jury die Möglichkeiten und schlägt dem Unternehmen
                         Projektpartner für eine kostenfreie Beratung und Umsetzung von Möglichkeiten vor.</p>
-                                <div>
-                                    <button className="btn striped-shadow violet ls" onClick={() => { history.push('/faq') }}><span>FRAGEN?</span></button>
-                                    <button className="btn striped-shadow violet ls" onClick={() => { history.push('/umfrage') }}><span>LOS GEHT'S</span></button>
+                                <div className="buttons-fragen-los">
+                                    <button className="btn striped-shadow violet ls frag" onClick={() => { history.push('/faq') }}><span>FRAGEN?</span></button>
+                                    <button className="btn striped-shadow violet ls loss" onClick={() => { history.push('/umfrage') }}><span>LOS GEHT'S</span></button>
                                 </div>
                             </div>
 
                         </div>
                     </div>
-                    <img src={foto} alt="" />
+                    <div className="macair-img"></div>
                 </div>
                 <footer>
                     <button className="untenLinks" onClick={() => { history.push('/') }}>≪</button>

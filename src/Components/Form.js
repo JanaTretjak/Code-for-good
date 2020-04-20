@@ -11,8 +11,11 @@ class Form extends Component {
                     <input type="text" onChange={this.props.handleChange} value={this.props.value} placeholder="schreibe hier deine Antwort..."></input>
                 </div>
                 <div className="bottom">
-                    <button onClick={this.props.before}> <i class="fas fa-angle-down"></i> </button>
-                    <button onClick={this.props.next}> <i class="fas fa-angle-up"></i> </button>
+                    <div>
+                        <button onClick={this.props.before}> <i class="fas fa-angle-down"></i> </button>
+                        <button onClick={this.props.next}> <i class="fas fa-angle-up"></i> </button>
+                    </div>
+    
                     <label>Sag uns wer du bist <span>und wir sagen dir was zu dir passt.</span></label>
                 </div>
             </form>

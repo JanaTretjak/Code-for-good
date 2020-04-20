@@ -11,7 +11,7 @@ class Second extends Component {
             <div className="second-page">
                 <section className="container second-box" >
                     <h1><span> SuperCode hilft -</span> <br /> Digitalisierungsinitiative für <br />
-                kleine Unternehmen in <br />Düsseldorfю</h1>
+                kleine Unternehmen in <br />Düsseldorf.</h1>
                     <p>Kostenlose Unterstützung für Einzelhändler, <br /> Gastronomen, Handwerker, Dienstleister, NGOs und Vereine</p>
                     <button onClick={() => { history.push('/interesse') }} className="erfahreMehr btn striped-shadow violet ls"> <span>Erfahre Mehr</span> </button>
                     <button className="btn striped-shadow violet ls losGehts" onClick={() => { history.push('/umfrage') }}><span>LOS GEHT'S</span></button>
