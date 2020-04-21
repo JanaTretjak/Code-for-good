@@ -9,11 +9,16 @@ import First from "./First";
 import ContactForm from "./СontactForm";
 import FAQ from "./FAQ"
 
+
 const firstChild = props => {
     const childrenArray = React.Children.toArray(props.children);
     return childrenArray[0] || null;
 };
-
+// const routes = [
+//     { path: '/', name: 'Home', Component: Home },
+//     { path: '/about', name: 'About', Component: About },
+//     { path: '/contact', name: 'Contact', Component: Contact },
+// ]
 export default class Routes extends Component {
 
     render() {
@@ -24,13 +29,16 @@ export default class Routes extends Component {
                     <Route
                         exact
                         path="/"
+                        activeClassName="active"
                         children={({ match, ...rest }) => (
                             <TransitionGroup component={firstChild}>
                                 {match && <Second {...rest} />}
                             </TransitionGroup>
+
                         )} />
                     <Route
                         path="/umfrage"
+                        activeClassName="active"
                         children={({ match, ...rest }) => (
                             <TransitionGroup component={firstChild}>
                                 {match && <Umfrage {...rest} />}

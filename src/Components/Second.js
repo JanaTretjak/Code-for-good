@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Second.css';
 import history from './history'
-//import AnimatedWrapper from "./AnimatedWrapper";
 
 class Second extends Component {
     state = {}
@@ -26,7 +25,3 @@ class Second extends Component {
 }
 
 export default Second;
-
-// onClick={this.props.vonRechts}
-
-//onClick={this.props.vonLinks}

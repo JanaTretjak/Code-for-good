@@ -60,10 +60,10 @@ class First extends Component {
                         <h1>Unsere Partner</h1>
                         <a href="#"><img src={image1} alt=""></img></a>
                         <a href="#"><img src={image2} alt=""></img></a>
-                        <a href="#"><img src={image3} alt=""></img></a>
-                        <a href="#"><img src={image4} alt=""></img></a>
+                        {/* <a href="#"><img src={image3} alt=""></img></a>
+                        <a href="#"><img src={image4} alt=""></img></a> */}
                         <a href="#"><img src={image5} alt=""></img></a>
-                        <a href="#"><img src={image6} alt=""></img></a>
+                        {/* <a href="#"><img src={image6} alt=""></img></a> */}
                     </div>
                 </footer>
 

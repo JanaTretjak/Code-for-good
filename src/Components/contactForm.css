@@ -85,9 +85,8 @@ input[type=number] {
 }
 .beenden1{
     text-align: center;
-    background: url(background.svg) bottom/contain no-repeat;
+    background-color: #5D3EDE;
     height: 100vh;
-    background-color: #fff;
   }
   .beenden1 h1{
       padding-top: 30vh;
