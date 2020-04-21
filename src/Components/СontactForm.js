@@ -56,7 +56,7 @@ class ContactForm extends Component {
                         <p>An diesen Zeiten erreichst du uns am besten an folgenden Tagen und Zeiten</p>
                         <p>Montag - Freitag 09:00 - 17:00 Uhr</p>
                         <p>Unser Campus befindet sich im Super7000 Coworcing Space - der Mutter aller Coworking Spaces. Die genau Adresse lautet:</p>
-                        <p>Ratherstr.25 40476 Düsseldorf</p>
+                        <p>Ratherstr. 25, 40476 Düsseldorf</p>
                     </div>
                     <form onSubmit={this.handleSubmit} name="contact">
                         <div className="contact-input">
