@@ -2,13 +2,12 @@
 import React, { Component } from 'react';
 import './First.css';
 import "./umfrage.css"
-import foto from "./foto.png"
 import image1 from "./img/image 1.svg"
 import image2 from "./img/super(code).svg"
-import image3 from "./img/image 5.svg"
-import image4 from "./img/image 10.svg"
+//import image3 from "./img/image 5.svg"
+//import image4 from "./img/image 10.svg"
 import image5 from "./img/image 9.svg"
-import image6 from "./img/sourcetree logo_png 1.svg"
+//import image6 from "./img/sourcetree logo_png 1.svg"
 import history from './history'
 
 class First extends Component {
@@ -73,5 +72,3 @@ class First extends Component {
 }
 
 export default First;
-
-//${ this.props.expend ? "SearchPage" : "SearchPageBack" }

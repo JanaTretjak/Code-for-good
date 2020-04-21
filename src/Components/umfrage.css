@@ -341,11 +341,8 @@ height: 80vh;
   background: none;
 }
 .endForm form>div:first-of-type{
-  /* background: url(background.svg) bottom/cover no-repeat; */
   display: grid;
   grid-template-columns: 1fr;
-  /* grid-template-rows: repeat(12, 8vh); */
-  /* overflow: hidden; */
   padding: 10vh 10vh 5vh;
   height: 100%;
 }

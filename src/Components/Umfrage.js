@@ -167,5 +167,3 @@ class Umfrage extends Component {
     }
 }
 export default Umfrage;
-
-//${this.props.expendUnten ? "SearchPageUmfrage" : "SearchPageBackUmfrage"}
