@@ -68,6 +68,8 @@ footer{
 }
 /****************************** media */
 
+/* Hier wird der Bildschirm für mobile Geräte angepasst */
+
 
 @media only screen and (max-width: 600px){
   .hilft-box{
@@ -161,5 +163,5 @@ footer{
     margin-left: 10vw;
   }
 } */
-  
+
 /* <img src={foto} alt="" /> */

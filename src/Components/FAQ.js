@@ -7,42 +7,42 @@ import FAQitem from './FAQitem';
 function FAQ(props) {
     const [faqs, setfaqs] = useState([
         {
-            question: 'Hier steht eine Frage, die sich jeder stellt?',
+            question: 'Was ist SuperCode?',
             answer: 'Das wird funktionieren',
             open: false
         },
         {
-            question: 'Hier steht eine Frage, die sich jeder stellt?',
-            answer: 'Das wird funktionieren2',
+            question: 'Wie könnt ihr mir helfen?',
+            answer: 'Einfach die Fragen auf "Lets Go" beantworten',
             open: false
         },
         {
-            question: 'Hier steht eine Frage, die sich jeder stellt?',
-            answer: 'Das wird funktionieren3',
+            question: 'Was ist der Sinn des Lebens?',
+            answer: '42',
             open: false
         },
         {
-            question: 'Hier steht eine Frage, die sich jeder stellt?',
-            answer: 'Das wird funktionieren3',
+            question: 'Wo geht es hier wieder raus??',
+            answer: 'Immer wieder auf "X" drücken',
             open: false
         },
         {
-            question: 'Hier steht eine Frage, die sich jeder stellt?',
-            answer: 'Das wird funktionieren3',
+            question: 'Hab ich kein von IT - ist das ein Problem?',
+            answer: 'Natürlich Nicht! Dafür sind wir ja da.',
             open: false
         },
         {
-            question: 'Hier steht eine Frage, die sich jeder stellt?',
-            answer: 'Das wird funktionieren3',
+            question: 'Wie lange wird es dauern?',
+            answer: 'Es hängt ab, welches Produkt ihr braucht',
             open: false
         },
         {
-            question: 'Hier steht eine Frage, die sich jeder stellt?',
-            answer: 'Das wird funktionieren3',
+            question: 'Wann meldet ihr euch??',
+            answer: 'Wegen hoher Nachfrage kann es bis zu 2 Tagen dauern',
             open: false
         },
         {
-            question: 'Hier steht eine Frage, die sich jeder stellt?',
+            question: 'Steht ihr auch nach der Corona-Krise zu verfügung??',
             answer: 'Das wird funktionieren3',
             open: false
         },

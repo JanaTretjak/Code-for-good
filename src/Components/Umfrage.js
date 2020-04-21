@@ -3,14 +3,16 @@ import data from "./data"
 import Form from './Form';
 import "./umfrage.css"
 import history from './history'
-import ProgressButton from 'react-progress-button'
+import ProgressButton from 'react-progress-button' //Hier mussten wir noch ein extra-Paket für React instalieren
 import "./progressButton.css"
 
+// Übergaba an Netlyfy Backend
 const encode = (data) => {
     return Object.keys(data)
         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
         .join("&");
 }
+
 class Umfrage extends Component {
     state = {
         display: true,
@@ -31,10 +33,14 @@ class Umfrage extends Component {
         this.setState({ display0: false });
         console.log(this.state.i)
     }
+    // Hier werden die Antworten gespeichert für Netlyfy
     handleChange = (event) => {
         this.setState({ value: event.target.value })
         this.setState({ [event.target.name]: event.target.value })
     }
+
+    //In diesem Teil werden die Fragen einzeln dargestellt und in dem Array werden die Antworten gespeichert; 
+    //Auch falls die Antwort leer sein sollte, wird es weitergeleitet; 
     next = (event) => {
         event.preventDefault();
         if (this.state.data[this.state.i].antwort === undefined) {
@@ -68,6 +74,7 @@ class Umfrage extends Component {
             this.setState({ value: '' })
         });
     }
+    //Hier werden die Antworten an N weitergeschickt
     handleSubmit = e => {
         fetch("/", {
             method: "POST",
@@ -78,6 +85,7 @@ class Umfrage extends Component {
             .catch(error => console.log(error));
         e.preventDefault();
     };
+    //Button zurück
     before = (event) => {
         event.preventDefault()
         if (this.state.i > 0) {
@@ -88,12 +96,8 @@ class Umfrage extends Component {
             });
         }
     }
-    // handleChange1 = e => this.setState({ [e.target.name]: e.target.value });
-    senden = (e) => {
-        //e.preventDefault();
-        this.setState({ display1: !this.state.display1 });
-        this.setState({ display2: !this.state.display2 });
-    }
+
+    //Das ist der Sende-Button - 
     handleClick = () => {
         this.setState({ buttonState: 'loading' })
         // make asynchronous call
@@ -102,6 +106,7 @@ class Umfrage extends Component {
             this.setState({ button: "Gesendet" });
 
         }, 3000)
+        // Man bekommt hier die Finale Seite Yeah Yeah
         setTimeout(() => {
             this.setState({ display1: !this.state.display1 });
             this.setState({ display2: !this.state.display2 });
