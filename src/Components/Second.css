@@ -94,6 +94,9 @@
     }
 } */
 @media only screen and (max-width: 900px){
+    .second-box{
+        width: 100%;
+    }
     .second-box h1{
         color: rgba(0, 222, 172);
         grid-column: 3/12;
