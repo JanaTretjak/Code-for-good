@@ -79,9 +79,9 @@ class Umfrage extends Component {
             this.setState({ value: '' })
         });
 
-        // const data = new FormData()
-        // data.append('file', this.state.selectedFile)
-        // console.log(this.state.selectedFile)
+        const data = new FormData()
+        data.append('file', this.state.selectedFile)
+        console.log(this.state.selectedFile)
     }
     handleSubmit = e => {
         fetch("/", {
