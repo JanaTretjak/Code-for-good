@@ -9,8 +9,8 @@ let data = [
     { titel: "Unterstützung?", frage: "8 -> Wie können wir dich dabei unterstützen?" },
     { titel: "Deadline?", frage: "9 -> Cool, gibt es bereits ein Timing oder Deadlines?" },
     { titel: "Designed oder programmiert?", frage: "10 -> Wurde bereits etwas designed oder programmiert?" },
-    { titel: "Inhalte", frage: "11 -> Gibts es Inhalte (Fotos, Logos, Texte und Grafiken)?" },
-    { titel: "Vergleichbare Projekte", frage: "12 -> Gibt es vergleichbare Projekte die du gut findest?" },
+    { titel: "Vergleichbare Projekte", frage: "11 -> Gibt es vergleichbare Projekte die du gut findest?" },
+    { titel: "Inhalte", frage: "12 -> Gibts es Inhalte (Fotos, Logos, Texte und Grafiken)?" },
 ]
 
 export default data;

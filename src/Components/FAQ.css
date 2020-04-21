@@ -1,7 +1,7 @@
 .FAQ{
     height: 100vh;
     width: 100%;
-    background-color: #FFF;
+    background-color: #fff;
     display: grid;
     grid-template-columns: repeat(11, 1fr) 12vh;
     grid-template-rows: repeat(12,1fr);
@@ -17,11 +17,12 @@
     display: grid;
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: repeat(12, 1fr);
+    background: #5D3EDE;
 }
 
 .FAQ h2{
-    border: 2.5px solid #5D3EDE;
-    color: #5D3EDE;
+    border: 2.5px solid rgba(0, 222, 172);
+    color: white;
     text-align: center;
     width: 15vh;
     height: max-content;
@@ -49,6 +50,7 @@
     text-shadow: #5D3EDE  0 0px, #5D3EDE 0 1px 0px, #5D3EDE -1px 0 0px, #5D3EDE -1px 0px;
     font-size: 1.2rem;
     color: #fff;
+    transition: .3s;
 }
 
 .faqs .faq .faq-answer {
@@ -61,27 +63,37 @@
     font-weight: 100;
     color: #60D7AC;
     padding: 2vh 0;
+    font-weight: 400;
+}
+.faqs .faqopen .faq-answer::before{
+    content: "- ";
 }
 .faqs .faq .faq-question:hover,.faqs .faqopen .faq-question{
-    color: #5D3EDE;
+    color:#60D7AC;
+    transform: scale(1.02);
 }
 .faqs .faq .faq-question:hover::after{
     content: " +";
 }
-.faqs .faqopen .faq-question::after{
+/* .faqs .faqopen .faq-question::after{
     content: " -";
-}
+} */
 .kreuz1{
     background: url(Menu_button.svg) center no-repeat;
     height: 8vh;
     width: 8vh;
-    background-color: #5D3EDE;
+    background-color: #60D7AC;
     border: 2px solid #fff;
     justify-self: center;
     grid-column: 12/13;
     margin-right: 1vh;
+    transition: 0.3s;
+}
+.kreuz1:hover{
+    transform: scale(1.07);
 }
 
+/* Fuer kleinere Bildschirme */
 @media only screen and (max-width: 900px){
     .FAQ{
         overflow: hidden;

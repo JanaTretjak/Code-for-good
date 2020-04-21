@@ -43,15 +43,20 @@
     height: 8vh;
     width: 8vh;
     border: 4px solid #fff;
+    transition: 0.3s;
 }
-.contact-input :nth-child(6),.contact-input :nth-child(2),
-.contact-input :nth-child(3),.contact-input :nth-child(4),
-.contact-input :nth-child(5){
+.kreuz:hover{
+    transform: scale(1.05);
+}
+.contact-input input{
     margin-bottom: 2vh;
     background-color: #5D3EDE;
     color: white;
     border: 2px solid white;
     padding: 10px;
+}
+.contact-input .senden{
+    margin-top: 5vh;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -78,19 +83,46 @@ input[type=number] {
     font-size: 1rem;
     border: 2px solid white;
 }
-.contact-input :nth-child(7){
-    background-color: #5D3EDE;
-    padding: 15px 0;
-    border: 2px solid white;
-    font-size: 1.5rem;
-    color: white;
+.beenden1{
+    text-align: center;
+    background: url(background.svg) bottom/contain no-repeat;
+    height: 100vh;
+    background-color: #fff;
+  }
+  .beenden1 h1{
+      padding-top: 30vh;
+    font-size: 5rem;
+    font-weight: 900;
+    color: #3dd7ac;
+    padding-bottom: 3vh;
+  }
+  .beenden1 p{
+    color: #3dd7ac;
+    width: 40%;
+    margin: 0 auto;
+    padding-bottom: 3vh;
+  }
+  .beenden1 button{
+    background: #3dd7ac;
+    border: 2px solid #3dd7ac;
+    border-radius: 27px;
+    color: currentColor;
+    cursor: pointer;
+    padding: 0.7em 1em;
+    text-decoration: none;
+    text-align: center;
+    height: 54px;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    transition: background-color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s, border-radius 0.3s;
+    width: 20vh;
+    color: #fff;
+    font-size: 2.2vh;
+  }
+.pb-button p{
+    font-weight: 300;
 }
-.contact-input :nth-child(7):hover{
-    background-color: white;
-    border: 2px solid #60D7AC;
-    color: #5D3EDE;
-}
-
 
 @media only screen and (max-width: 600px){
     .contact-box{
@@ -123,6 +155,9 @@ input[type=number] {
     .contact-text h1 span{
         color:white;
         text-shadow: #60D7AC 1px 0 0px, #60D7AC 0 1px 0px, #60D7AC -1px 0 0px, #60D7AC 0 -1px 0px;
+        }
+    .kreuz{
+        background-color: #5D3EDE;
     }
 }
 @media only screen and (max-width: 900px){
@@ -145,6 +180,9 @@ input[type=number] {
     }
     .anim{
         margin-bottom: 5vh;
+    }
+    .kreuz{
+        background-color: #5D3EDE;
     }
 }
 @media only screen and (max-width: 1200px){

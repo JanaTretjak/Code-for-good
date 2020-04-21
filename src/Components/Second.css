@@ -45,6 +45,10 @@
     color: #fff;
     justify-self: left;
     margin: 1vh;
+    transition: 0.3s;
+}
+.untenLinks:hover{
+    transform: scale(1.05);
 }
 .obenRechts{
     grid-column: 12/13;
@@ -59,6 +63,10 @@
     font-size: 3rem;
     color: white;
     align-self: center;
+    transition: 0.3s;
+}
+.obenRechts:hover{
+    transform: scale(1.05);
 }
 .streifen{
     background: rgba(0, 222, 172);
