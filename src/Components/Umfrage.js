@@ -42,11 +42,11 @@ class Umfrage extends Component {
         this.setState({ value: event.target.value })
         this.setState({ [event.target.name]: event.target.value })
 
-        console.log(event.target.files)
-        this.setState({
-            selectedFile: event.target.files,
-            loaded: 0,
-        })
+        // console.log(event.target.files)
+        // this.setState({
+        //     selectedFile: event.target.files,
+        //     loaded: 0,
+        // })
     }
 
     //In diesem Teil werden die Fragen einzeln dargestellt und in dem Array werden die Antworten gespeichert; 
@@ -84,9 +84,9 @@ class Umfrage extends Component {
             this.setState({ value: '' })
         });
 
-        const data = new FormData()
-        data.append('file', this.state.selectedFile)
-        console.log(this.state.selectedFile)
+        // const data = new FormData()
+        // data.append('file', this.state.selectedFile)
+        // console.log(this.state.selectedFile)
     }
     //Hier werden die Antworten an N weitergeschickt
     handleSubmit = e => {
