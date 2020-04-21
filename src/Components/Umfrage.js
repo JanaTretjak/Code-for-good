@@ -13,12 +13,15 @@ const encode = (data) => {
         .join("&");
 }
 
+
 class Umfrage extends Component {
     state = {
         display: true,
         display0: true,
         display1: false,
         display2: true,
+        displayFrage1: true,
+        displayFrage2: true,
         data: data,
         i: 0,
         frage: data[0].frage,
@@ -26,7 +29,7 @@ class Umfrage extends Component {
         name: {},
         value: '',
         buttonState: '',
-        button: "Senden"
+        button: "Senden",
     }
     start = () => {
         this.setState({ display: false });
@@ -73,6 +76,13 @@ class Umfrage extends Component {
         }, () => {
             this.setState({ value: '' })
         });
+        if (this.state.i === this.state.data.length - 1) {
+            const data = new FormData()
+            data.append('file', this.state.selectedFile)
+
+        }
+        console.log(this.state.i)
+        console.log(this.state.data.length - 1)
     }
     //Hier werden die Antworten an N weitergeschickt
     handleSubmit = e => {
@@ -112,6 +122,7 @@ class Umfrage extends Component {
             this.setState({ display2: !this.state.display2 });
         }, 4500)
     }
+    // In diesem Part wird man durch die einzelnen Fragen geführt
     render() {
 
         return (

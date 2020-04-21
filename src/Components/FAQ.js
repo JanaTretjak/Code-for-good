@@ -8,12 +8,12 @@ function FAQ(props) {
     const [faqs, setfaqs] = useState([
         {
             question: 'Was ist SuperCode?',
-            answer: 'Das wird funktionieren',
+            answer: 'Der Retter in der Not',
             open: false
         },
         {
             question: 'Wie könnt ihr mir helfen?',
-            answer: 'Einfach die Fragen auf "Lets Go" beantworten',
+            answer: 'Einfach die Fragen auf "Lets Go" beantworten und eine ausführliche Antwort bekommen',
             open: false
         },
         {
@@ -27,7 +27,7 @@ function FAQ(props) {
             open: false
         },
         {
-            question: 'Hab ich kein von IT - ist das ein Problem?',
+            question: 'Hab ich kein Plan von IT - ist das ein Problem?',
             answer: 'Natürlich Nicht! Dafür sind wir ja da.',
             open: false
         },
@@ -43,42 +43,42 @@ function FAQ(props) {
         },
         {
             question: 'Steht ihr auch nach der Corona-Krise zu verfügung??',
+            answer: 'Aber Klar!',
+            open: false
+        },
+        {
+            question: 'Wird das viel Arbeit sein?',
+            answer: 'Nein',
+            open: false
+        },
+        {
+            question: 'Meint ihr die Digitalisierung ist überhaupt nötig? Oder nur ein Hype',
+            answer: 'Wenn das Geschägft laufen soll...',
+            open: false
+        },
+        {
+            question: 'Corona beeinträchtigt nicht mein Geschäft. Ich hätte trotzdem gerne Hilfe. Geht das?',
             answer: 'Das wird funktionieren3',
             open: false
         },
         {
-            question: 'Hier steht eine Frage, die sich jeder stellt?',
+            question: 'Ist das alles umsonst?',
             answer: 'Das wird funktionieren3',
             open: false
         },
         {
-            question: 'Hier steht eine Frage, die sich jeder stellt?',
-            answer: 'Das wird funktionieren3',
+            question: 'Ich hab nur ein kleiner Selbständiger; könnt ihr mir helfen?',
+            answer: 'Bestimmt',
             open: false
         },
         {
-            question: 'Hier steht eine Frage, die sich jeder stellt?',
-            answer: 'Das wird funktionieren3',
+            question: 'Wie lange kann/muss das dauern??',
+            answer: 'Das hängt von gewünschten Leistungen ab',
             open: false
         },
         {
-            question: 'Hier steht eine Frage, die sich jeder stellt?',
-            answer: 'Das wird funktionieren3',
-            open: false
-        },
-        {
-            question: 'Hier steht eine Frage, die sich jeder stellt?',
-            answer: 'Das wird funktionieren3',
-            open: false
-        },
-        {
-            question: 'Hier steht eine Frage, die sich jeder stellt?',
-            answer: 'Das wird funktionieren3',
-            open: false
-        },
-        {
-            question: 'Das ist die erste Frage3?',
-            answer: 'Das wird funktionieren3',
+            question: 'Wird das Angebot auch noch ausgeweitet?',
+            answer: 'Ja. Aber genaues kann man noch nicht sagen',
             open: false
         }
     ]);

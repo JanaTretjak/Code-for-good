@@ -47,7 +47,8 @@
 }
 
 .btn {
-  font-family: 'Bungee Shade', sans-serif;
+  font-family: sans-serif;
+  text-transform: uppercase;
   height: 80px;
   line-height: 65px;
   display: inline-block;
@@ -255,6 +256,8 @@ button.btn.striped-shadow:before {
   outline: none;
   transition: background-color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s, border-radius 0.3s;
   width: 20vh;
+  color: #fff;
+  font-size: 2.2vh;
 }
 .senden {
   width: 20vh;
@@ -278,7 +281,7 @@ button.btn.striped-shadow:before {
   .fragen label:first-of-type{
     margin-left: 0;
     font-size: 1.2rem;
-   width: 100%;
+    width: 100%;
 
 }
 .fragen input[type="text"]{
