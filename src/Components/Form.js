@@ -11,7 +11,7 @@ class Form extends Component {
             <form>
                 <div className={this.props.action ? "moveUp" : "up"} >
                     <label name={this.props.name}>{this.props.frage}</label>
-                    <input type={this.props.i === 11 ? "file" : "text"} onChange={this.props.handleChange} name={this.state.data[this.props.i].titel} value={this.props.value} placeholder="schreibe hier deine Antwort..."></input>
+                    <input type="text" onChange={this.props.handleChange} name={this.state.data[this.props.i].titel} value={this.props.value} placeholder="schreibe hier deine Antwort..."></input>
                 </div>
                 <div className="bottom">
                     <div>
