@@ -40,9 +40,9 @@ class Umfrage extends Component {
         this.setState({ value: event.target.value })
         this.setState({ [event.target.name]: event.target.value })
 
-        console.log(event.target.files[0])
+        console.log(event.target.files)
         this.setState({
-            selectedFile: event.target.files[0],
+            selectedFile: event.target.files,
             loaded: 0,
         })
     }
