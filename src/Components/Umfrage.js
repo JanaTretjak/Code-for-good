@@ -41,12 +41,6 @@ class Umfrage extends Component {
     handleChange = (event) => {
         this.setState({ value: event.target.value })
         this.setState({ [event.target.name]: event.target.value })
-
-        // console.log(event.target.files)
-        // this.setState({
-        //     selectedFile: event.target.files,
-        //     loaded: 0,
-        // })
     }
 
     //In diesem Teil werden die Fragen einzeln dargestellt und in dem Array werden die Antworten gespeichert; 
@@ -71,10 +65,10 @@ class Umfrage extends Component {
             this.setState({ display1: !this.state.display1 });
         }
         if (this.state.i === 1 && this.state.data[0].antwort === undefined) {
-            this.state.data[this.state.i].frage = "2 -> Danke dir, und wie lautet dein Nachname?"
+            this.state.data[this.state.i].frage = "2 -> Danke dir. Und wie lautet dein Nachname?"
             this.setState({ frage: this.state.data[1].frage });
         } else if (this.state.i === 1) {
-            this.state.data[this.state.i].frage = "2 -> Danke, " + this.state.data[0].antwort + ", " + "und wie lautet dein Nachname?"
+            this.state.data[this.state.i].frage = "2 -> Danke, " + this.state.data[0].antwort + ". " + "Und wie lautet dein Nachname?"
             this.setState({ frage: this.state.data[1].frage });
         }
         this.setState({ frage: this.state.data[this.state.i].frage });
@@ -83,11 +77,8 @@ class Umfrage extends Component {
         }, () => {
             this.setState({ value: '' })
         });
-
-        // const data = new FormData()
-        // data.append('file', this.state.selectedFile)
-        // console.log(this.state.selectedFile)
     }
+
     //Hier werden die Antworten an N weitergeschickt
     handleSubmit = e => {
         fetch("/", {
@@ -99,6 +90,7 @@ class Umfrage extends Component {
             .catch(error => console.log(error));
         e.preventDefault();
     };
+
     //Button zurück
     before = (event) => {
         event.preventDefault()
@@ -126,19 +118,22 @@ class Umfrage extends Component {
             this.setState({ display2: !this.state.display2 });
         }, 4500)
     }
-    // In diesem Part wird man durch die einzelnen Fragen geführt
+
     render() {
 
         return (
             <section className={`umfrage `}>
+
                 <article className="losGehts" style={this.state.display ? { display: "block" } : { display: "none" }}>
                     <h1>Los <span>geht's</span> 👋</h1>
                     <p>Hi, jetzt gleich erwarten dich ein paar Fragen, die uns helfen werden deine Anfrage besser beurteilen zu können. Bitte, nimm dir genug Zeit, alle Frage in Ruhe und vollständig auszufühlen. Bereit?</p>
                     <button className="start btn striped-shadow violet st" onClick={this.start}><span>Start</span></button>
                 </article>
+
                 <article className="fragen" style={this.state.display0 ? { display: "none" } : { display: "block" }} >
                     <Form before={this.before} next={this.next} handleChange={this.handleChange} frage={this.state.frage} value={this.state.value} i={this.state.i} name={this.state.titel} />
                 </article>
+
                 <article className="endForm" style={this.state.display1 ? { display: "block" } : { display: "none" }}>
                     <form onSubmit={this.handleSubmit} name="umfrage">
                         <div>
@@ -146,7 +141,6 @@ class Umfrage extends Component {
                                 <div id="array" name="array">
                                     <label name="frage" value={elt.frage}>{elt.frage}</label>
                                     <label className="antwort" name="antwort" value={elt.antwort}>{elt.antwort}</label>
-                                    {/* <input className="antwort" type="text" name={`antwort${i}`} placeholder={elt.antwort} onChange={this.handleChange1} /> */}
                                 </div>)
                             }
                         </div>
@@ -157,11 +151,13 @@ class Umfrage extends Component {
                         </div>
                     </form >
                 </article >
+
                 <article className="pb-container beenden" style={this.state.display2 ? { display: "none" } : { display: "block" }} >
                     <h1>🎉YEAH <span>YEAH</span>🎉</h1>
-                    <p>Deine Anfrage wurde an uns versendet. Du erhälst in kürze per Mail eine Bestätigung. Wir werden alle Angaben prüfen und uns zeitnah bei dir melden.</p>
+                    <p>Deine Anfrage wurde an uns versendet. Du erhältst in kürze per Mail eine Bestätigung. Wir werden alle Angaben prüfen und uns zeitnah bei dir melden.</p>
                     <button onClick={() => { history.push('/') }}>Beenden</button>
                 </article>
+
             </section >
         );
     }
